@@ -19,7 +19,7 @@ export class TestLibComponent implements AfterContentInit {
 
   public ngAfterContentInit(): void {
     const TemplateComponent: any = Component({
-      template: '<div *ngIf="true">worked</div>',
+      template: '<lib-other></lib-other> <div *ngIf="true">worked</div>',
     })(class {});
     const TemplateModule: any = NgModule({
       declarations: [TemplateComponent],

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { OtherModule } from 'projects/test-lib/src/lib/other/other.module';
 import { ReExportedModule } from './reexport.module';
 
 @Component({
@@ -10,8 +11,9 @@ import { ReExportedModule } from './reexport.module';
 export class AppComponent {
   libImports = [
     /* fails*/
-     CommonModule
+     CommonModule,
     /* works */
-    // ReExportedModule
+    // ReExportedModule,
+    OtherModule
   ]
 }
